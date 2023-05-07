@@ -1,4 +1,4 @@
-import { User, ROLES } from './01-enum';
+import { ROLES } from './01-enum';
 
 const currentUser = {
   username: 'nicobytes',
