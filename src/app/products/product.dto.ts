@@ -5,9 +5,15 @@ export interface CreateProductDto
   categoryId: string;
 }
 
+// Contrario de Omit
 // type example = Pick<Product, 'color' | 'description'>;
 
 export interface UpdateProductDto extends Partial<CreateProductDto> {}
 
 // Contrario de Partial
-// type example = Required<Product>;
+// type example2 = Required<Product>;
+
+export interface FindProductDto extends Readonly<Partial<Product>> {}
+
+// Readonly
+// type example3 = Readonly<Product>;
