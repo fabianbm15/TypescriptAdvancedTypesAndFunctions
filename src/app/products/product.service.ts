@@ -27,7 +27,7 @@ export const addProduct = (data: CreateProductDto): Product => {
 };
 
 export const updateProduct = (
-  id: string,
+  id: Product['id'], // Se obtiene el tipado de Product['id'] (escalable)
   changes: UpdateProductDto
 ): Product => {
   const index = products.findIndex((item) => item.id === id);
