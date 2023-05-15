@@ -6,3 +6,7 @@ export const addProduct = (data: Product) => {
   // data.id = '1' // No me permite porque es solo readonly
   products.push(data);
 };
+
+export const updateaddProduct = (id: string, changes: Product) => {
+  // code
+};
