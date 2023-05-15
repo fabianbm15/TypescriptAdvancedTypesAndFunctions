@@ -41,6 +41,12 @@ export const updateProduct = (
 
 export const findProducts = (dto: FindProductDto): Product[] => {
   // code
-  // dto.isNew = false;
+  // dto.isNew = false; // Va a dar error debido a que es readonly
+
+  // Se modifica el FindProductDto para impedir que ocurra esto:
+  // dto.tags = []; // No me permite modificarlo
+  // dto.tags?.pop(); // Si me permite hacerlo...
+  // dto.tags?.push('as'); // Si me permite hacerlo...
+
   return products;
 };
