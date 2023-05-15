@@ -5,4 +5,9 @@ export interface CreateProductDto
   categoryId: string;
 }
 
-type example = Pick<Product, 'color' | 'description'>;
+// type example = Pick<Product, 'color' | 'description'>;
+
+export interface UpdateProductDto extends Partial<CreateProductDto> {}
+
+// Contrario de Partial
+// type example = Required<Product>;
